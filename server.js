@@ -7,11 +7,13 @@ const mysql      = require('mysql');
 
 const pwd = require('./pswd').pwd
 
+const port = process.env.PORT || 3000
+
 const connection = mysql.createConnection({
-  host     : '127.0.0.1',
-  user     : 'root',
-  password : pwd,
-  database : 'classicmodels'
+  host     : 'den1.mysql6.gear.host',
+  user     : 'deployment3',
+  password : 'Ov8FI_Ydd7N?',
+  database : 'deployment3'
 });
 
 let app = express();
@@ -57,4 +59,4 @@ app.delete('/:id', (req, res) => {
   // ])
 })
 
-app.listen(3000);
+app.listen(port);
