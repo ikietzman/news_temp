@@ -29,6 +29,7 @@ app.get('/', function(req, res) {
     res.send(results);
     //connection.end();
   });
+})
 
 app.post('/', function(req, res) {
   /* Update the database here */
@@ -48,15 +49,15 @@ app.delete('/:id', (req, res) => {
       res.send('deleted: ' + req.params.id)
   });
 
-}
+})
 
-);
+
   // res.send([
   //   {title: 'The Godfather', year: 1969, genre: 'Drama', seen: true},
   //   {title: 'Fantasia', year: 1939, genre: 'Fantasy', seen: false},
   //   {title: 'Kubo and the Two Strings', year: 2015, genre: 'Animated', seen: true},
   //   {title: 'The Wind That Shakes the Barley', year: 2006, genre: 'Drama', seen: false}
   // ])
-})
+
 
 app.listen(port);
